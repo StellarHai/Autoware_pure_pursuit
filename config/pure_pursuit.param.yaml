@@ -1,16 +1,16 @@
 /**:
   ros__parameters:
-    ld_velocity_ratio: 2.4
-    ld_lateral_error_ratio: 3.6
-    ld_curvature_ratio: 120.0
-    long_ld_lateral_error_threshold: 0.5
-    min_lookahead_distance: 4.35
-    max_lookahead_distance: 15.0
-    converged_steer_rad: 0.1
-    reverse_min_lookahead_distance: 7.0
-    prediction_ds: 0.3
-    prediction_distance_length: 21.0
-    resampling_ds: 0.1
-    curvature_calculation_distance: 4.0
-    enable_path_smoothing: false
-    path_filter_moving_ave_num: 25
+    ld_velocity_ratio: 2.4 # 速度比例因子，用于计算纵向误差
+    ld_lateral_error_ratio: 3.6 # 横向误差比例因子
+    ld_curvature_ratio: 120.0 # 曲率比例因子，用于调整曲率对控制的影响
+    long_ld_lateral_error_threshold: 0.5 # 长期纵向误差阈值
+    min_lookahead_distance: 4.35 # 最小前瞻距离，车辆控制算法开始考虑的最近点
+    max_lookahead_distance: 15.0 # 最大前瞻距离，车辆控制算法考虑的最远点
+    converged_steer_rad: 0.1 # 收敛转向角度，当车辆接近目标点时，期望的转向角度变化范围
+    reverse_min_lookahead_distance: 7.0 # 反向最小前瞻距离，用于倒车时的路径规划
+    prediction_ds: 0.3 # 预测步长，用于路径预测时的距离间隔
+    prediction_distance_length: 21.0 # 预测距离长度，预测路径的总长度
+    resampling_ds: 0.1 # 重采样步长，用于路径重采样时的距离间隔
+    curvature_calculation_distance: 4.0 # 曲率计算距离，用于计算曲率的点之间的距离
+    enable_path_smoothing: false # 是否启用路径平滑功能
+    path_filter_moving_ave_num: 25 # 路径滤波移动平均的点数，用于平滑路径
